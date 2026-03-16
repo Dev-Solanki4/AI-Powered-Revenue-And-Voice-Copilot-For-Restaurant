@@ -1,0 +1,148 @@
+/* Revenue Intelligence - Technical Design System */
+
+.revenue-container {
+    animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.revenue-header-chip {
+    background: rgba(99, 102, 241, 0.1);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    padding: 2px 10px;
+    border-radius: 9999px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #6366f1;
+}
+
+.revenue-kpi-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.revenue-kpi-card:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(99, 102, 241, 0.3);
+    transform: translateY(-2px);
+}
+
+.revenue-kpi-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top right, rgba(99, 102, 241, 0.1), transparent 70%);
+    pointer-events: none;
+}
+
+.revenue-stat-value {
+    font-family: var(--font-mono);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.revenue-table-wrapper {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 32px;
+    overflow: hidden;
+    backdrop-filter: blur(20px);
+}
+
+.revenue-table th {
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: rgba(156, 163, 175, 0.8);
+    padding: 24px 32px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.revenue-table td {
+    padding: 24px 32px;
+    vertical-align: middle;
+}
+
+.revenue-row-highlight {
+    background: linear-gradient(90deg, rgba(99, 102, 241, 0.05) 0%, transparent 100%);
+}
+
+.popularity-bar-container {
+    height: 6px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 9999px;
+    overflow: hidden;
+    position: relative;
+}
+
+.popularity-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #6366f1, #a855f7);
+    box-shadow: 0 0 15px rgba(99, 102, 241, 0.5);
+    border-radius: 9999px;
+}
+
+.aura-insight-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 12px;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);
+    border: 1px solid rgba(168, 85, 247, 0.2);
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #a855f7;
+    margin-top: 8px;
+}
+
+.trend-indicator {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.trend-up {
+    background: rgba(16, 185, 129, 0.1);
+    color: #10b981;
+}
+
+.trend-down {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Recharts Customization */
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+    stroke: rgba(255, 255, 255, 0.03);
+}
+
+.recharts-tooltip-cursor {
+    fill: rgba(255, 255, 255, 0.02);
+}
